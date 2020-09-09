@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import useLocalStorage from './useLocalStorage';
 
 const useDarkMode = (key, initialValue) => {
 
-    const [theme, setTheme] = useLocalStorage(key, initialValue)
+    const [theme, setTheme] = useLocalStorage("darkMode", initialValue)
 
     // const handleChange = () => {
     //     if (theme === "dark-mode") {
@@ -13,9 +13,9 @@ const useDarkMode = (key, initialValue) => {
     //     }
     // }
 
-    useEffect(() => {
-        theme ? document.body.classList.add("dark-mode") : document.body.classList.remove("dark-mode");
-    }, [theme])
+    // useEffect(() => {
+    //     theme ? document.body.classList.add("dark-mode") : document.body.classList.remove("dark-mode");
+    // }, [theme])
  
     
     return [theme, setTheme];
